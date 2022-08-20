@@ -4,6 +4,12 @@
 #         self.val = val
 #         self.left = left
 #         self.right = right
+
+
+#the key to this problem is updating the left and right of x < current.val < y
+#we start with -inf < x < inf
+#since the root of binary tree has no boundries in order to be valid
+
 class Solution:
     def isValidBST(self, root: Optional[TreeNode]) -> bool:
         return self.dfs(root,float("-inf"),float("inf"))
